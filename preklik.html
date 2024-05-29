@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="preklik.css">
 </head>
 <body>
-    <h1>hello</h1>
-    <a href="index.html">Index</a>
+    <h1>Hello</h1>
+    <a href="index.html"><h1>Index</h1></a>
+    <h1 id="cas"></h1>
+    <h2>OK</h2>
 </body>
+<script>
+    const casElment = document.getElementById("cas");
+    
+    function updateCas(){
+        const teraz = new Date();
+        const formatovanyCas = teraz.toLocaleTimeString();
+        casElment.textContent = formatovanyCas;
+    }
+
+    updateCas();
+    setInterval(updateCas, 1000);
+</script>
 </html>
